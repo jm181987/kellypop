@@ -24,7 +24,26 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1581201241878955"
      crossorigin="anonymous"></script>
   
-  
+	 <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			let counters = document.querySelectorAll('.count');
+			counters.forEach(counter => {
+				let target = parseInt(counter.innerText.replace('+', '').replace(',', ''));
+				let count = 0;
+				let step = Math.ceil(target / 100); // Ajusta la velocidad
+				let interval = setInterval(() => {
+					count += step;
+					counter.innerText = "+" + count.toLocaleString();
+					if (count >= target) {
+						counter.innerText = "+" + target.toLocaleString();
+						clearInterval(interval);
+					}
+				}, 50); // Ajusta la velocidad del contador
+			});
+		});
+		</script>
+
+
 </head>
 <body>
   
