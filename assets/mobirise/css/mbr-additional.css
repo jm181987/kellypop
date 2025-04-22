@@ -27,6 +27,11 @@
   height: 100%;
 }
 
+
+.carousel-item img {
+  height: 400px; /* o 300px si lo querés más bajo */
+  object-fit: cover;
+}
 img,
 .card-wrap,
 .card-wrapper,
@@ -848,7 +853,7 @@ a {
 }
 .cid-uzYBgnxAJy {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-uzYBgnxAJy .mbr-fallback-image.disabled {
