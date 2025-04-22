@@ -32,6 +32,16 @@
   height: 400px; /* o 300px si lo querés más bajo */
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+
 img,
 .card-wrap,
 .card-wrapper,
