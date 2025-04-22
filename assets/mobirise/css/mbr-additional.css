@@ -1,6 +1,32 @@
 .btn {
   border-width: 2px;
 }
+
+.item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.item-link:hover {
+  transform: translateY(-5px);
+  background-color: #f8f9fa;
+}
+
+.item-link:hover .card-title,
+.item-link:hover .mbr-iconfont {
+  color: #000 !important;
+}
+
+.item-wrapper {
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  border-radius: .5rem;
+  height: 100%;
+}
+
 img,
 .card-wrap,
 .card-wrapper,
