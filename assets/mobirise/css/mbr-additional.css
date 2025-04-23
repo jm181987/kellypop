@@ -68,6 +68,112 @@
   100% { box-shadow: 0 0 10px rgba(255, 0, 204, 0.6); }
 }
 
+.kellypop-container {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffe6f0, #e3f2fd);
+}
+
+.kellypop-title {
+  font-size: 28px;
+  color: #e91e63;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.stat-box {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+  min-width: 200px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+}
+
+.stat-label {
+  font-size: 20px;
+  color: #673ab7;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #009688;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .stat-box {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .kellypop-title {
+    font-size: 22px;
+  }
+}
+
+.tiktok-counter-container {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffebee, #fce4ec);
+}
+
+.tiktok-counter-title {
+  font-size: 28px;
+  color: #ec407a;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.tiktok-frame-wrapper {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+}
+
+.tiktok-frame-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.sb-frame-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sb-frame-crop {
+  width: 100%;
+  height: 300px; /* recorta lo visible */
+  overflow: hidden;
+  position: relative;
+}
+
+.sb-frame-crop iframe {
+  transform: scale(1.05);
+  transform-origin: top left;
+  width: 100%;
+  height: 600px; /* alto completo para que cargue todo, aunque solo se vea parte */
+  border: none;
+}
+
 img,
 .card-wrap,
 .card-wrapper,
