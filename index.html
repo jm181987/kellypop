@@ -194,6 +194,39 @@
 
 </section>
 
+<div style="text-align: center; margin-bottom: 20px;">
+	<h2 style="font-family: Arial, sans-serif; font-size: 24px; color: #e91e63;">
+	  A las 17 hs todos los días en vivo
+	</h2>
+  
+	<div id="youtube-live-container" style="display: none;">
+	  <iframe width="560" height="315"
+		src="https://www.youtube.com/embed/live_stream?channel=UCTSbayiFcHLcne-iFjNTD2w&autoplay=1"
+		frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+	  </iframe>
+	  <br><br>
+	  <!-- Botón de suscripción -->
+	  <div>
+		<iframe src="https://www.youtube.com/subscribe_embed?usegapi=1&channelid=UCTSbayiFcHLcne-iFjNTD2w&layout=default&count=default" 
+		  style="border: 0; height: 30px; width: 150px;" 
+		  scrolling="no" frameborder="0">
+		</iframe>
+	  </div>
+	</div>
+  </div>
+  
+  <script>
+	// Verifica si el canal está transmitiendo en vivo
+	fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCTSbayiFcHLcne-iFjNTD2w&eventType=live&type=video&key=AIzaSyCYi0jjMQsz33-y1veHpB9m-2V9_fDpEAY")
+	  .then(response => response.json())
+	  .then(data => {
+		if (data.items && data.items.length > 0) {
+		  document.getElementById("youtube-live-container").style.display = "block";
+		}
+	  })
+	  .catch(error => console.error("Error al verificar transmisión en vivo:", error));
+  </script>
+  
 
 <a href="http://link.mercadopago.com.uy/kellypop" target="_blank" class="donate-banner">
 	¿Deseás ayudar el canal? <strong>¡Click aquí!</strong>
